@@ -12,28 +12,26 @@ $(function() {
 
     //watcher
     $('form').on('json', function() {
-        alert('you clicked submit');
+        alert('your data will be saved to the console');
 
-        var answer = [];
-        answer.push(
-            (JSON.stringify($('#Field1').val())),
-            (JSON.stringify($('#Field2').val())),
-            (JSON.stringify($('#Field3').val())),
-            (JSON.stringify($('#Field4').val())),
-            (JSON.stringify($('#Field5').val())),
-            (JSON.stringify($('#Field6').val())),
-            (JSON.stringify($('#Field7').val())),
-            (JSON.stringify($('#Field8').val())),
-            (JSON.stringify($('#Field9').val())),
-            (JSON.stringify($('#Field10').val())),
-            (JSON.stringify($('#Field11').val())),
-            (JSON.stringify($('#Field13').val())),
-            (JSON.stringify($('#Field15').val())));
+        var answer = {};
+
+        answer[$('#Field1').attr('name')] = $('#Field1').val()
+        answer[$('#Field2').attr('name')] = $('#Field2').val()
+        answer[$('#Field3').attr('name')] = $('#Field3').val()
+        answer[$('#Field4').attr('name')] = $('#Field4').val()
+        answer[$('#Field5').attr('name')] = $('#Field5').val()
+        answer[$('#Field6').attr('name')] = $('#Field6').val()
+        answer[$('#Field7').attr('name')] = $('#Field7').val()
+        answer[$('#Field8').attr('name')] = $('#Field8').val()
+        answer[$('#Field9').attr('name')] = $('#Field9').val()
+        answer[$('#Field10').attr('name')] = $('#Field10').val()
+        answer[$('#Field11').attr('name')] = $('#Field11').val()
+        answer[$('#Field13').attr('name')] = $('#Field13').val()
+        answer[$('#Field15').attr('name')] = $('#Field15').val()
+
         console.log(answer);
 
             return false;
         })
-
-
-
 })
