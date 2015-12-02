@@ -28,7 +28,7 @@ $(function() {
         answer[$('#Field10').attr('name')] = $('#Field10').val()
         answer[$('#Field11').attr('name')] = $('#Field11').val()
         answer[$('#Field13').attr('name')] = $('#Field13').val()
-        answer[$('#Field15').attr('name')] = $('#Field15').val()
+        answer[$('#Field15').attr('name')] = $('#Field15').prop("checked")
 
         console.log(answer);
 
